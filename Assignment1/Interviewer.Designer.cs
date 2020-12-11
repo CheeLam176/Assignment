@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interviewer));
             this.label9 = new System.Windows.Forms.Label();
             this.sendFeedbackbtn = new System.Windows.Forms.Button();
             this.templateLoadButton = new System.Windows.Forms.Button();
@@ -51,6 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pdfBtn = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.templateDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -264,12 +267,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pdfBtn
+            // 
+            this.pdfBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pdfBtn.Location = new System.Drawing.Point(190, 455);
+            this.pdfBtn.Name = "pdfBtn";
+            this.pdfBtn.Size = new System.Drawing.Size(131, 45);
+            this.pdfBtn.TabIndex = 94;
+            this.pdfBtn.Text = "Save As PDF";
+            this.pdfBtn.UseVisualStyleBackColor = true;
+            this.pdfBtn.Click += new System.EventHandler(this.pdfBtn_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Interviewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(812, 520);
+            this.Controls.Add(this.pdfBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.sendFeedbackbtn);
             this.Controls.Add(this.templateLoadButton);
@@ -326,5 +351,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pdfBtn;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
