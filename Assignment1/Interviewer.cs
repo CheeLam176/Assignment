@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Drawing.Printing;
 
 namespace Assignment1
 {
@@ -92,6 +93,30 @@ namespace Assignment1
             Login login = new Login();
             login.Show();
             Visible = false;
+        }
+
+        private void pdfBtn_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(PrintImage);
+            printPreviewDialog1.Document = pd;
+            printPreviewDialog1.Show();
+            pd.Print();
+        }
+        void PrintImage(object o, PrintPageEventArgs e)
+        {
+            int x = SystemInformation.WorkingArea.X;
+            int y = SystemInformation.WorkingArea.Y;
+            int width = this.Width;
+            int height = this.Height;
+
+            Rectangle bounds = new Rectangle(x, y, width, height);
+
+            Bitmap img = new Bitmap(width, height);
+
+            this.DrawToBitmap(img, bounds);
+            Point p = new Point(100, 100);
+            e.Graphics.DrawImage(img, p);
         }
     }
 }

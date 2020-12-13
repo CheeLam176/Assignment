@@ -13,7 +13,7 @@ namespace Assignment1
 
         public string tryConn()
         {
-            string tryConnect1 = "server=localhost;user=me;database=seassignemnt;port=3306;";
+            string tryConnect1 = "server=localhost;user=testing123;database=dynamictesting1;port=3306;password=testing123";
             connect = new MySqlConnection(tryConnect1);
             try
             {
