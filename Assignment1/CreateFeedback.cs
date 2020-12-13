@@ -32,12 +32,12 @@ namespace Assignment1
 
 
 
-        public List<CreateFeedback> getAllReview(MySqlConnection connect)
+        public List<CreateFeedback> getAllReview(MySqlConnection conn)
         {
 
             List<CreateFeedback> listLabr = new List<CreateFeedback>();
-            string sql = "SELECT * FROM interviewer";
-            MySqlCommand sqlComm = new MySqlCommand(sql, connect);
+            string sql = "SELECT * FROM feedback";
+            MySqlCommand sqlComm = new MySqlCommand(sql, conn);
             MySqlDataReader myReader;
             myReader = sqlComm.ExecuteReader();
             while (myReader.Read())
@@ -57,21 +57,5 @@ namespace Assignment1
         }
     }
 
-    public class createFeedback
 
-    {
-        public int insertInterviewer(MySqlConnection connect, CreateFeedback sendData)
-        {
-            string interviewerAddSQL = "INSERT INTO interviewer (templateID ,lastName, firstName, address, position, email, phoneNo) "
-                + " VALUES ('" + sendData.InterviewerChosenTemplateID + "','" + sendData.InterviewerLastName + "' , '" + sendData.InterviewerFirstName +
-                "', '" + sendData.InterviewerAddress + "' , '" + sendData.InterviewerPosition +
-                "','" + sendData.InterviewerEmail + "','" + sendData.InterviewerPhoneNo + "')";
-
-
-            MySqlCommand command = new MySqlCommand(interviewerAddSQL, connect);
-
-            return command.ExecuteNonQuery();
-
-        }
-    }
 }

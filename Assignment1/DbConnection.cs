@@ -13,11 +13,11 @@ namespace Assignment1
 
         public string connect()
         {
-            string connStr = "server=localhost;user=testing123;database=dynamictesting1;port=3306;password=testing123";//;SslMode=none
+            string connStr = "server=localhost;user=testing123;database=dynamictesting1;port=3306;password=testing123";
             conn = new MySqlConnection(connStr);
             try
             {
-                conn.Open();//perform database operations
+                conn.Open();
             }
             catch (Exception ex)
             {

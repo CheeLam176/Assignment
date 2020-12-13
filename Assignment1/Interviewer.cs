@@ -68,10 +68,11 @@ namespace Assignment1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            IntDbConnection db_connect = new IntDbConnection();
-            db_connect.tryConn();
 
+            DbConnection dbConn = new DbConnection();
+            dbConn.connect();
             CreateFeedback sendInterviewer = new CreateFeedback();
+
             sendInterviewer.InterviewerChosenTemplateID = int.Parse(idSearchtxtbox.Text);
             sendInterviewer.InterviewerLastName = txt1.Text;
             sendInterviewer.InterviewerFirstName = txt2.Text;
@@ -81,9 +82,9 @@ namespace Assignment1
             sendInterviewer.InterviewerEmail = txt6.Text;
             sendInterviewer.InterviewerDay = txt7.Text;
 
-            createFeedback toDB = new createFeedback();
-            int recordCount = toDB.insertInterviewer(db_connect.getConnect(), sendInterviewer);
-            MessageBox.Show("Feedback has been created. Check Database to view it.");
+            SaveFeedback newTxtbox1 = new SaveFeedback();
+            int recordCnt = newTxtbox1.addFeedback(dbConn.getConn(), sendInterviewer);
+            MessageBox.Show(recordCnt + " new details has been inserted !!");
         }
 
         private void button1_Click(object sender, EventArgs e)
