@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="TestAddNewTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCreateTemplate.cs" />
+    <Compile Include="TestCreateFeedback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
