@@ -56,12 +56,14 @@
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteTemplate.cs" />
     <Compile Include="Edit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditTemplate.cs" />
     <Compile Include="Email.cs">
       <SubType>Form</SubType>
     </Compile>

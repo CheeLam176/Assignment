@@ -18,7 +18,7 @@ namespace Assignment1
             InitializeComponent();
         }
 
-        public int deleteData(MySqlConnection conn, Admin admin)
+        /*public int deleteData(MySqlConnection conn, Admin admin)
         {
             string deleteQuery = "DELETE FROM template where id='" + searchIdTxt.Text + "'";
 
@@ -26,7 +26,7 @@ namespace Assignment1
             MySqlCommand sqlComm = new MySqlCommand(deleteQuery, conn);
             return sqlComm.ExecuteNonQuery();
 
-        }
+        }*/
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -34,7 +34,10 @@ namespace Assignment1
             dbConn.connect();
             Admin admin = new Admin();
 
-            int recordCnt = deleteData(dbConn.getConn(), admin);
+            admin.Id = int.Parse(searchIdTxt.Text);
+
+            DeleteTemplate dltTem = new DeleteTemplate();
+            int recordCnt = dltTem.deleteData(dbConn.getConn(), admin);
             MessageBox.Show(recordCnt + " data have been deleted! ");
         }
 

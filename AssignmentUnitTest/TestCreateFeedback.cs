@@ -16,21 +16,22 @@ namespace AssignmentUnitTest
         [TestMethod]
         public void createFeedbackTest()
         {
-            IntDbConnection db_connect = new IntDbConnection();
-            db_connect.tryConn();
 
+            DbConnection dbConn = new DbConnection();
+            dbConn.connect();
             CreateFeedback sendInterviewer = new CreateFeedback();
-            sendInterviewer.InterviewerChosenTemplateID = int.Parse("39");
-            sendInterviewer.InterviewerLastName = "me";
-            sendInterviewer.InterviewerFirstName = "me";
-            sendInterviewer.InterviewerAddress = "me";
-            sendInterviewer.InterviewerPosition = "me";
-            sendInterviewer.InterviewerPhoneNo = "me";
-            sendInterviewer.InterviewerEmail = "me";
-            sendInterviewer.InterviewerDay = "Saturday";
 
-            createFeedback toDB = new createFeedback();
-            int recordCount = toDB.insertInterviewer(db_connect.getConnect(), sendInterviewer);
+            sendInterviewer.InterviewerChosenTemplateID = int.Parse("50");
+            sendInterviewer.IntervieweeLastName = "me";
+            sendInterviewer.IntervieweeFirstName = "me";
+            sendInterviewer.IntervieweeAddress = "me";
+            sendInterviewer.IntervieweePosition = "me";
+            sendInterviewer.IntervieweePhoneNo = 01125864125;
+            sendInterviewer.IntervieweeEmail = "me";
+            sendInterviewer.InterviewerComment = "me";
+        
+            SaveFeedback newTxtbox1 = new SaveFeedback();
+            int recordCnt = newTxtbox1.addFeedback(dbConn.getConn(), sendInterviewer);
             Assert.IsNotNull("Pass.");
         }
     }

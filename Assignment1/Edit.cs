@@ -18,7 +18,7 @@ namespace Assignment1
             InitializeComponent();
         }
 
-        public int editData(MySqlConnection conn, Admin admin)
+        /*public int editData(MySqlConnection conn, Admin admin)
         {
             string deleteQuery = "UPDATE dynamictesting1.template SET Textbox1='" + txtbox1.Text + "',Textbox2='" + txtbox2.Text + "',Textbox3='" + txtbox3.Text + "',Textbox4='" + txtbox4.Text + "',Textbox5='" + txtbox5.Text + "',Textbox6='" + txtbox6.Text + "',Textbox7='" + txtbox7.Text + "' WHERE id=" + int.Parse(idTxtbox.Text);
 
@@ -26,7 +26,7 @@ namespace Assignment1
             MySqlCommand sqlComm = new MySqlCommand(deleteQuery, conn);
             return sqlComm.ExecuteNonQuery();
 
-        }
+        }*/
 
         private void updBtn_Click(object sender, EventArgs e)
         {
@@ -42,7 +42,8 @@ namespace Assignment1
             textbox.Textbox6 = txtbox6.Text;
             textbox.Textbox7 = txtbox7.Text;
 
-            int recordCnt = editData(dbConn.getConn(), textbox);
+            EditTemplate edtTem = new EditTemplate();
+            int recordCnt = edtTem.editData(dbConn.getConn(), textbox);
             MessageBox.Show(recordCnt + " new details has been updated !!");
         }
 

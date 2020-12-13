@@ -33,8 +33,6 @@
             this.sendFeedbackbtn = new System.Windows.Forms.Button();
             this.templateLoadButton = new System.Windows.Forms.Button();
             this.templateDataGrid = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt7 = new System.Windows.Forms.TextBox();
             this.searchIDButton = new System.Windows.Forms.Button();
             this.IDTemplateLabel = new System.Windows.Forms.Label();
             this.idSearchtxtbox = new System.Windows.Forms.TextBox();
@@ -54,6 +52,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pdfBtn = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.txt7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.templateDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,23 +97,6 @@
             this.templateDataGrid.Name = "templateDataGrid";
             this.templateDataGrid.Size = new System.Drawing.Size(413, 326);
             this.templateDataGrid.TabIndex = 90;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.label8.Location = new System.Drawing.Point(479, 358);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 15);
-            this.label8.TabIndex = 89;
-            this.label8.Text = "(Placeholder)";
-            // 
-            // txt7
-            // 
-            this.txt7.Location = new System.Drawing.Point(600, 355);
-            this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(163, 20);
-            this.txt7.TabIndex = 88;
             // 
             // searchIDButton
             // 
@@ -288,19 +271,36 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // txt7
+            // 
+            this.txt7.Location = new System.Drawing.Point(599, 354);
+            this.txt7.Name = "txt7";
+            this.txt7.Size = new System.Drawing.Size(163, 20);
+            this.txt7.TabIndex = 96;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.label8.Location = new System.Drawing.Point(478, 359);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 15);
+            this.label8.TabIndex = 95;
+            this.label8.Text = "(Placeholder)";
+            // 
             // Interviewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(812, 520);
+            this.Controls.Add(this.txt7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pdfBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.sendFeedbackbtn);
             this.Controls.Add(this.templateLoadButton);
             this.Controls.Add(this.templateDataGrid);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt7);
             this.Controls.Add(this.searchIDButton);
             this.Controls.Add(this.IDTemplateLabel);
             this.Controls.Add(this.idSearchtxtbox);
@@ -332,8 +332,6 @@
         private System.Windows.Forms.Button sendFeedbackbtn;
         private System.Windows.Forms.Button templateLoadButton;
         private System.Windows.Forms.DataGridView templateDataGrid;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt7;
         private System.Windows.Forms.Button searchIDButton;
         private System.Windows.Forms.Label IDTemplateLabel;
         private System.Windows.Forms.TextBox idSearchtxtbox;
@@ -353,5 +351,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button pdfBtn;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.TextBox txt7;
+        private System.Windows.Forms.Label label8;
     }
 }

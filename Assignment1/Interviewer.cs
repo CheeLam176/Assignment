@@ -75,13 +75,14 @@ namespace Assignment1
             CreateFeedback sendInterviewer = new CreateFeedback();
 
             sendInterviewer.InterviewerChosenTemplateID = int.Parse(idSearchtxtbox.Text);
-            sendInterviewer.InterviewerLastName = txt1.Text;
-            sendInterviewer.InterviewerFirstName = txt2.Text;
-            sendInterviewer.InterviewerAddress = txt3.Text;
-            sendInterviewer.InterviewerPosition = txt4.Text;
-            sendInterviewer.InterviewerPhoneNo = txt5.Text;
-            sendInterviewer.InterviewerEmail = txt6.Text;
-            sendInterviewer.InterviewerDay = txt7.Text;
+            sendInterviewer.IntervieweeLastName = txt1.Text;
+            sendInterviewer.IntervieweeFirstName = txt2.Text;
+            sendInterviewer.IntervieweeAddress = txt3.Text;
+            sendInterviewer.IntervieweePosition = txt4.Text;
+            sendInterviewer.IntervieweeEmail = txt5.Text;
+            sendInterviewer.IntervieweePhoneNo = int.Parse(txt6.Text);
+            sendInterviewer.InterviewerComment = txt7.Text;
+
 
             SaveFeedback newTxtbox1 = new SaveFeedback();
             int recordCnt = newTxtbox1.addFeedback(dbConn.getConn(), sendInterviewer);
